@@ -6,20 +6,20 @@
   <title>Mr. Smith Menu</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-zinc-950 text-black">
   <!-- Front Page -->
   <div id="home" class="min-h-screen flex flex-col items-center justify-center">
     <img src="logo.png" alt="Logo" class="w-32 mb-8">
     <div class="flex flex-col gap-4">
-      <button onclick="navigate('alcoholic')" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl text-xl">Alkoholna pića</button>
-      <button onclick="navigate('nonalcoholic')" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl text-xl">Bezalkoholna pića</button>
-      <button onclick="navigate('shisha')" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl text-xl">Shisha</button>
-      <button onclick="navigate('all')" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl text-xl">Sve Grupe</button>
+      <button onclick="navigate('alcoholic')" class="bg-amber-500 hover:bg-amber-600 px-6 py-3 rounded-xl text-xl">Alkoholna pića</button>
+      <button onclick="navigate('nonalcoholic')" class="bg-amber-500 hover:bg-amber-600 px-6 py-3 rounded-xl text-xl">Bezalkoholna pića</button>
+      <button onclick="navigate('shisha')" class="bg-amber-500 hover:bg-amber-600 px-6 py-3 rounded-xl text-xl">Shisha</button>
+      <button onclick="navigate('all')" class="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-xl text-xl">Sve Grupe</button>
     </div>
   </div>
 
   <!-- Menu Page Template -->
-  <div id="menuPage" class="hidden flex-col p-6">
+  <div id="menuPage" class="hidden flex-col p-6 text-white">
     <img src="logo.png" alt="Logo" class="w-20 mx-auto mb-4">
     <button onclick="goBack()" class="mb-4 px-4 py-2 bg-gray-700 rounded">← Nazad</button>
     <div id="groupNav" class="flex flex-wrap gap-3 justify-center mb-6"></div>
@@ -28,31 +28,32 @@
 
   <script>
     const categories = {
-      alcoholic: ["Cocktails", "Alkoholna Pića", "Likeri i Rakije", "Pivo", "Cider", "Vina", "Champagnes"],
-      nonalcoholic: ["Topli Napici", "Mineralna Voda", "Bezalkoholna Pića", "Prirodni Sokovi", "Energetski Napici"],
-      shisha: ["Shisha"],
-      all: ["Topli Napici", "Mineralna Voda", "Bezalkoholna Pića", "Prirodni Sokovi", "Energetski Napici", "Shisha", "Cocktails", "Alkoholna Pića", "Likeri i Rakije", "Pivo", "Cider", "Vina", "Champagnes"]
+      	alcoholic: ["Cocktails", "Alkoholna Pića", "Likeri i Rakije", "Pivo", "Cider", "Vina", "Champagnes"],
+      	nonalcoholic: ["Topli Napici", "Mineralna Voda", "Bezalkoholna Pića", "Prirodni Sokovi", "Energetski Napici"],
+      	shisha: ["Shisha"],
+      	all: ["Topli Napici", "Mineralna Voda", "Bezalkoholna Pića", "Prirodni Sokovi", "Energetski Napici", "Shisha", "Cocktails", "Alkoholna Pića", "Likeri i Rakije", "Pivo", "Cider", "Vina", "Champagnes"]
     };
 
     const items = {
       	"Topli Napici": [
-        	{ name: "Espresso", price: "2.00 KM", img: "espresso.jpg" },
-        	{ name: "Mali macchiato", price: "2.50 KM", img: "mali_macchiato.jpg" },
-        	{ name: "Veliki macchiato", price: "3.00 KM", img: "veliki_macchiato.jpg" },
+        	{ name: "Espresso", price: "2.50 KM", img: "espresso.jpg" },
+        	{ name: "Mali macchiato", price: "3.00 KM", img: "mali_macchiato.jpg" },
+        	{ name: "Veliki macchiato", price: "3.50 KM", img: "veliki_macchiato.jpg" },
         	{ name: "Cappuccino", price: "4.00 KM", img: "cappuccino.jpg" },
-        	{ name: "Kafa sa šlagom", price: "3.00 KM", img: "kafa_sa_slagom.jpg" },
+        	{ name: "Kafa sa šlagom", price: "4.00 KM", img: "kafa_sa_slagom.jpg" },
         	{ name: "Late macchiato", price: "4.00 KM", img: "late_macchiato.jpg" },
         	{ name: "Nes 3u1", price: "3.50 KM", img: "nes_3u1.jpg" },
         	{ name: "Nes Vanilija", price: "3.50 KM", img: "nes_vanilija.jpg" },
         	{ name: "Nes Čokolada", price: "3.50 KM", img: "nes_cokolada.jpg" },
         	{ name: "Nes Lješnjak", price: "3.50 KM", img: "nes_ljesnjak.jpg" },
         	{ name: "Nes Kokos", price: "3.50 KM", img: "nes_kokos.jpg" },
-        	{ name: "Ice coffee", price: "3.00 KM", img: "ice_coffee.jpg" },
+        	{ name: "Ice coffee", price: "4.00 KM", img: "ice_coffee.jpg" },
         	{ name: "Topla čokolada", price: "4.00 KM", img: "topla_cokolada.jpg" },
         	{ name: "Americano", price: "4.00 KM", img: "americano.jpg" },
-        	{ name: "Čaj", price: "2.50 KM", img: "caj.jpg" },
-        	{ name: "Happy kafa", price: "1.50 KM", img: "happy_kafa.jpg" },
-        	{ name: "Happy čaj", price: "1.50 KM", img: "happy_caj.jpg" },
+		{ name: "Dupli Espresso", price: "5.00 KM", img: "dupli_espresso.jpg" },
+        	{ name: "Čaj", price: "3.00 KM", img: "caj.jpg" },
+        	{ name: "Happy kafa", price: "2.00 KM", img: "happy_kafa.jpg" },
+        	{ name: "Happy čaj", price: "2.00 KM", img: "happy_caj.jpg" },
       ],
 	  
       	"Mineralna Voda": [

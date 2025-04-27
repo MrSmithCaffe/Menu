@@ -42,18 +42,18 @@
         	{ name: "Cappuccino", price: "4.00 KM", img: "cappuccino.jpg" },
         	{ name: "Kafa sa šlagom", price: "4.00 KM", img: "kafa_sa_slagom.jpg" },
         	{ name: "Late macchiato", price: "4.00 KM", img: "late_macchiato.jpg" },
-        	{ name: "Nes 3u1", price: "3.50 KM", img: "nes_3u1.jpg" },
-        	{ name: "Nes Vanilija", price: "3.50 KM", img: "nes_vanilija.jpg" },
-        	{ name: "Nes Čokolada", price: "3.50 KM", img: "nes_cokolada.jpg" },
-        	{ name: "Nes Lješnjak", price: "3.50 KM", img: "nes_ljesnjak.jpg" },
-        	{ name: "Nes Kokos", price: "3.50 KM", img: "nes_kokos.jpg" },
+        	{ name: "Nes 3u1", price: "3.50 KM", img: "ness.jpg" },
+        	{ name: "Nes Vanilija", price: "3.50 KM", img: "ness.jpg" },
+        	{ name: "Nes Čokolada", price: "3.50 KM", img: "ness.jpg" },
+        	{ name: "Nes Lješnjak", price: "3.50 KM", img: "ness.jpg" },
+        	{ name: "Nes Kokos", price: "3.50 KM", img: "ness.jpg" },
         	{ name: "Ice coffee", price: "4.00 KM", img: "ice_coffee.jpg" },
         	{ name: "Topla čokolada", price: "4.00 KM", img: "topla_cokolada.jpg" },
         	{ name: "Americano", price: "4.00 KM", img: "americano.jpg" },
 		{ name: "Dupli Espresso", price: "5.00 KM", img: "dupli_espresso.jpg" },
         	{ name: "Čaj", price: "3.00 KM", img: "caj.jpg" },
-        	{ name: "Happy kafa", price: "2.00 KM", img: "happy_kafa.jpg" },
-        	{ name: "Happy čaj", price: "2.00 KM", img: "happy_caj.jpg" },
+        	{ name: "Happy kafa", price: "2.00 KM", img: "espresso.jpg" },
+        	{ name: "Happy čaj", price: "2.00 KM", img: "caj.jpg" },
       ],
 	  
       	"Mineralna Voda": [
@@ -229,11 +229,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               ${(items[group] || []).map(item => `
                 <div class="bg-gray-900 p-4 rounded-xl flex items-center gap-4">
-		   <div class="flex-1">
+		  <div class="flex-1">
                     <div class="font-semibold">${item.name}</div>
                     <div class="text-sm">${item.price}</div>
-		   </div>
-		   <img src="images/${item.img}" alt=" " class="w-20 h-20 object-cover rounded mb-2">
+		  </div>
+		  <img src="images/${item.img}" alt=" " class="w-20 h-20 object-cover rounded mb-2">
                 </div>
               `).join('')}
             </div>

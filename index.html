@@ -36,7 +36,7 @@
 
     const items = {
       	"Topli Napici": [
-        	{ name: "Espresso", price: "2.50 KM", img: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+        	{ name: "Espresso", price: "2.50 KM", img: "espresso.jpg" },
         	{ name: "Mali macchiato", price: "3.00 KM", img: "mali_macchiato.jpg" },
         	{ name: "Veliki macchiato", price: "3.50 KM", img: "veliki_macchiato.jpg" },
         	{ name: "Cappuccino", price: "4.00 KM", img: "cappuccino.jpg" },
@@ -229,11 +229,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               ${(items[group] || []).map(item => `
                 <div class="bg-gray-900 p-4 rounded-xl flex items-center gap-4">
-		  <div class="flex-1">
+		   <div class="flex-1">
                     <div class="font-semibold">${item.name}</div>
                     <div class="text-sm">${item.price}</div>
-		  </div>
-		  <img src="${item.img}" alt=" " class="w-20 h-20 object-cover rounded mb-2">
+		   </div>
+		   <img src="images/${item.img}" alt=" " class="w-20 h-20 object-cover rounded mb-2">
                 </div>
               `).join('')}
             </div>
